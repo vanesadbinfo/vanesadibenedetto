@@ -1,125 +1,48 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Política de Privacidad de vanesadibenedetto.com">
-<title>Política de Privacidad | Vanesa Di Benedetto</title>
-<link rel="canonical" href="https://vanesadibenedetto.com/pages/privacidad.html">
-<meta name="robots" content="noindex, follow">
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="Política de Privacidad | Vanesa Di Benedetto">
-<meta property="og:description" content="Política de Privacidad de vanesadibenedetto.com">
-<meta property="og:url" content="https://vanesadibenedetto.com/pages/privacidad.html">
-<meta property="og:image" content="https://vanesadibenedetto.com/assets/images/HERO_INICIO.jpg">
-<meta property="og:locale" content="es_ES">
-<meta property="og:site_name" content="Vanesa Di Benedetto">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Política de Privacidad | Vanesa Di Benedetto">
-<meta name="twitter:description" content="Política de Privacidad de vanesadibenedetto.com">
-<meta name="twitter:image" content="https://vanesadibenedetto.com/assets/images/HERO_INICIO.jpg">
-<link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16.png">
-<link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
-<link rel="manifest" href="../manifest.json">
-<link rel="stylesheet" href="../assets/css/main.css">
-</head>
-<body>
-<a href="#main" class="skip-link">Saltar al contenido</a>
-
-<nav>
-  <a href="../index.html" class="nav-name">Vanesa Di Benedetto</a>
-  <div class="nav-links">
-    <a href="../index.html" class="page">Inicio</a>
-    <a href="sobre-mi.html" class="page">Sobre Mí</a>
-    <a href="autentica.html" class="page">Auténtica</a>
-    <a href="retiro-toscana.html" class="page">Retiro Toscana</a>
-    <a href="blog.html" class="page">Blog</a>
-    <a href="contacto.html" class="page">Contacto</a>
-    <a href="https://wa.me/34643103079" class="nav-cta" target="_blank" rel="noopener">Hablemos</a>
-  </div>
-  <button class="nav-burger" aria-label="Abrir menú" aria-controls="mobileMenu" aria-expanded="false"><span></span><span></span><span></span></button>
-</nav>
-
-<div class="nav-mobile-menu" id="mobileMenu">
-  <a href="../index.html">Inicio</a>
-  <a href="sobre-mi.html">Sobre Mí</a>
-  <a href="autentica.html">Auténtica</a>
-  <a href="retiro-toscana.html">Retiro Toscana</a>
-  <a href="blog.html">Blog</a>
-  <a href="contacto.html">Contacto</a>
-  <a href="https://wa.me/34643103079" class="cta-mobile" target="_blank" rel="noopener">Hablemos por WhatsApp</a>
-</div>
-
-
-<main id="main">
-<header class="section center" style="padding-top:clamp(120px,15vw,160px);padding-bottom:0;background:var(--marfil);">
-  <span class="eyebrow">Legal</span>
-  <h1 style="font-size:clamp(1.8rem,4vw,2.6rem);">Política de Privacidad</h1>
-</header>
-
-<div class="legal-body">
-  <p style="font-size:12.5px;color:var(--texto-grey);">⚠️ Datos fiscales ya incorporados. Este texto sigue siendo una base estándar — se recomienda revisión por un profesional antes de publicarse.</p>
-
-  <h2>1. Responsable del tratamiento</h2>
-  <ul>
-    <li><strong>Responsable:</strong> Vanesa Di Benedetto</li>
-    <li><strong>NIF/DNI:</strong> Y-7452004-H</li>
-    <li><strong>Domicilio:</strong> Paseo de la Capa Negra, 6, Rivas-Vaciamadrid, Madrid</li>
-    <li><strong>Email:</strong> Escribenos@vanesadibenedetto.com</li>
-  </ul>
-
-  <h2>2. ¿Qué datos tratamos?</h2>
-  <p>A través del formulario de contacto de este sitio web recogemos: nombre, email, teléfono (opcional), el servicio de interés y el mensaje que nos escribas. No solicitamos datos sensibles a través del formulario.</p>
-
-  <h2>3. ¿Con qué finalidad tratamos tus datos?</h2>
-  <p>Tus datos se usan exclusivamente para responder a tu consulta, ofrecerte información sobre los servicios solicitados y, si avanzamos en una colaboración, gestionar dicha relación (sesiones, mentoría o reserva del retiro).</p>
-
-  <h2>4. ¿Cuál es la legitimación para el tratamiento?</h2>
-  <p>La base legal es tu consentimiento expreso, otorgado al marcar la casilla de aceptación al enviar el formulario de contacto, conforme al artículo 6.1.a) del Reglamento General de Protección de Datos (RGPD).</p>
-
-  <h2>5. ¿Por cuánto tiempo conservamos tus datos?</h2>
-  <p>Los datos se conservarán mientras exista un interés mutuo para mantener el contacto o la relación de servicio, y posteriormente, durante los plazos legalmente exigibles. Puedes solicitar su eliminación en cualquier momento.</p>
-
-  <h2>6. ¿A qué destinatarios se comunicarán tus datos?</h2>
-  <p>Tus datos no se cederán a terceros, salvo obligación legal. El formulario de contacto de este sitio se gestiona a través de un proveedor externo de envío de formularios (Formspree), que actúa como encargado del tratamiento únicamente para hacer llegar tu mensaje.</p>
-
-  <h2>7. ¿Cuáles son tus derechos?</h2>
-  <p>Tienes derecho a acceder, rectificar y suprimir tus datos, así como otros derechos detallados a continuación:</p>
-  <ul>
-    <li>Derecho a solicitar el acceso a tus datos personales.</li>
-    <li>Derecho a solicitar su rectificación o supresión.</li>
-    <li>Derecho a solicitar la limitación de su tratamiento.</li>
-    <li>Derecho a oponerte al tratamiento.</li>
-    <li>Derecho a la portabilidad de tus datos.</li>
-  </ul>
-  <p>Puedes ejercer estos derechos escribiendo a Escribenos@vanesadibenedetto.com, así como reclamar ante la Agencia Española de Protección de Datos (www.aepd.es) si consideras que no se han atendido correctamente.</p>
-
-  <p style="margin-top:30px;">Última actualización: junio de 2026.</p>
-</div>
-
-</main>
-
-<footer>
-  <p>© Vanesa Di Benedetto 2026 · Método ORIGEN</p>
-  <div class="footer-links">
-    <a href="contacto.html">Contacto</a>
-    <a href="aviso-legal.html">Aviso Legal</a>
-    <a href="privacidad.html">Privacidad</a>
-    <a href="cookies.html">Cookies</a>
-  </div>
-</footer>
-
-<div class="cookie-bar" id="cookieBar">
-  <p>Usamos cookies técnicas esenciales para que la web funcione. No usamos cookies de seguimiento ni publicidad sin tu permiso. <a href="cookies.html">Más información</a></p>
-  <div class="cookie-actions">
-    <button class="reject" id="cookieReject" type="button">Rechazar</button>
-    <button class="accept" id="cookieAccept" type="button">Aceptar</button>
-  </div>
-</div>
-
-<script src="../assets/js/main.js"></script>
-</body>
-</html>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://vanesadibenedetto.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://vanesadibenedetto.com/pages/sobre-mi.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vanesadibenedetto.com/pages/autentica.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vanesadibenedetto.com/pages/retiro-toscana.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://vanesadibenedetto.com/pages/blog.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vanesadibenedetto.com/pages/contacto.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://vanesadibenedetto.com/pages/blog/volver-a-habitarte-con-deseo.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://vanesadibenedetto.com/pages/blog/de-la-nina-buena-a-la-mujer-libre.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://vanesadibenedetto.com/pages/blog/lo-que-nadie-nos-enseno.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>
