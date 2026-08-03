@@ -99,3 +99,73 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 });
+
+// ── Landing Retiro Toscana ─────────────────────────────────────
+document.addEventListener('DOMContentLoaded', function () {
+  var countdown = document.getElementById('retreatCountdown');
+  var earlyBlock = document.getElementById('earlyPriceBlock');
+  var priceEls = document.querySelectorAll('[data-retreat-price]');
+  var priceNote = document.getElementById('dynamicPriceNote');
+  var schemaEl = document.getElementById('retreatSchema');
+  var deadline = new Date('2026-08-15T23:59:59+02:00').getTime();
+
+  function setStandardPrice() {
+    priceEls.forEach(function (el) { el.textContent = '2.750 €'; });
+    if (earlyBlock) earlyBlock.hidden = true;
+    if (priceNote) priceNote.textContent = 'Precio vigente: 2.750 € IVA incluido.';
+    if (schemaEl) {
+      try {
+        var schema = JSON.parse(schemaEl.textContent);
+        schema.offers.price = '2750';
+        delete schema.offers.priceValidUntil;
+        schemaEl.textContent = JSON.stringify(schema);
+      } catch (e) { /* El contenido visible sigue siendo correcto. */ }
+    }
+  }
+
+  function updateCountdown() {
+    if (!countdown) return;
+    var distance = deadline - Date.now();
+    if (distance <= 0) {
+      setStandardPrice();
+      return;
+    }
+    var days = Math.floor(distance / 86400000);
+    var hours = Math.floor((distance % 86400000) / 3600000);
+    var minutes = Math.floor((distance % 3600000) / 60000);
+    var seconds = Math.floor((distance % 60000) / 1000);
+    countdown.querySelector('[data-days]').textContent = String(days).padStart(2, '0');
+    countdown.querySelector('[data-hours]').textContent = String(hours).padStart(2, '0');
+    countdown.querySelector('[data-minutes]').textContent = String(minutes).padStart(2, '0');
+    countdown.querySelector('[data-seconds]').textContent = String(seconds).padStart(2, '0');
+  }
+
+  if (Date.now() > deadline) setStandardPrice();
+  else if (countdown) {
+    updateCountdown();
+    window.setInterval(updateCountdown, 1000);
+  }
+
+  var lightbox = document.getElementById('villaLightbox');
+  if (lightbox) {
+    var lightboxImage = lightbox.querySelector('img');
+    var closeButton = lightbox.querySelector('button');
+    document.querySelectorAll('[data-lightbox]').forEach(function (item) {
+      item.addEventListener('click', function () {
+        lightboxImage.src = item.getAttribute('data-lightbox');
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImage.src = '';
+      document.body.style.overflow = '';
+    }
+    closeButton.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', function (e) { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox(); });
+  }
+});
