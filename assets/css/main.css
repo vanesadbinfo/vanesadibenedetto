@@ -770,3 +770,13 @@ html { scroll-behavior: smooth; }
     letter-spacing: -0.025em;
   }
 }
+
+/* ── Retiro: precio "Próximamente" y lista de espera ── */
+.price-box .price.price-soon { font-size: clamp(1.9rem, 4.5vw, 2.6rem); }
+.price-box .price-note { margin-top: 14px; }
+.reserve-waitlist p { max-width: 620px; margin: 0 auto 26px; }
+.reserve-waitlist h2 { margin-bottom: 16px; }
+.reserve-micro { font-size: 12px; letter-spacing: 1px; color: var(--terracota-text); margin: 18px auto 0 !important; }
+
+/* ── Footer: botón "Configurar cookies" ── */
+footer .footer-links a[data-cookie-settings] { cursor: pointer; }

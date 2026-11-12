@@ -40,23 +40,31 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // ── Banner de cookies ──────────────────────────────────────────
+  // La preferencia se guarda en localStorage. Si el navegador bloquea el
+  // almacenamiento (modo privado estricto), el banner se muestra igualmente.
   const cookieBar = document.getElementById('cookieBar');
   const COOKIE_KEY = 'vdb_cookie_consent';
+  function getConsent() { try { return localStorage.getItem(COOKIE_KEY); } catch (e) { return null; } }
+  function setConsent(v) { try { localStorage.setItem(COOKIE_KEY, v); } catch (e) { /* sin almacenamiento */ } }
+  function clearConsent() { try { localStorage.removeItem(COOKIE_KEY); } catch (e) { /* sin almacenamiento */ } }
+  function showCookieBar() { if (cookieBar) cookieBar.classList.add('show'); }
+  function hideCookieBar() { if (cookieBar) cookieBar.classList.remove('show'); }
+
   if (cookieBar) {
-    if (!localStorage.getItem(COOKIE_KEY)) {
-      setTimeout(function () { cookieBar.classList.add('show'); }, 700);
-    }
+    if (!getConsent()) setTimeout(showCookieBar, 700);
     var acceptBtn = document.getElementById('cookieAccept');
     var rejectBtn = document.getElementById('cookieReject');
-    if (acceptBtn) acceptBtn.addEventListener('click', function () {
-      localStorage.setItem(COOKIE_KEY, 'accepted');
-      cookieBar.classList.remove('show');
-    });
-    if (rejectBtn) rejectBtn.addEventListener('click', function () {
-      localStorage.setItem(COOKIE_KEY, 'rejected');
-      cookieBar.classList.remove('show');
-    });
+    if (acceptBtn) acceptBtn.addEventListener('click', function () { setConsent('accepted'); hideCookieBar(); });
+    if (rejectBtn) rejectBtn.addEventListener('click', function () { setConsent('rejected'); hideCookieBar(); });
   }
+  // Enlace "Configurar cookies" del pie: permite cambiar la decisión en cualquier momento
+  document.querySelectorAll('[data-cookie-settings]').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      clearConsent();
+      showCookieBar();
+    });
+  });
 
   // ── Formulario de contacto (Web3Forms) ─────────────────────────
   const contactForm = document.getElementById('contactForm');
@@ -102,50 +110,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // ── Landing Retiro Toscana ─────────────────────────────────────
 document.addEventListener('DOMContentLoaded', function () {
-  var countdown = document.getElementById('retreatCountdown');
-  var earlyBlock = document.getElementById('earlyPriceBlock');
-  var priceEls = document.querySelectorAll('[data-retreat-price]');
-  var priceNote = document.getElementById('dynamicPriceNote');
-  var schemaEl = document.getElementById('retreatSchema');
-  var deadline = new Date('2026-08-15T23:59:59+02:00').getTime();
-
-  function setStandardPrice() {
-    priceEls.forEach(function (el) { el.textContent = '2.750 €'; });
-    if (earlyBlock) earlyBlock.hidden = true;
-    if (priceNote) priceNote.textContent = 'Precio vigente: 2.750 € IVA incluido.';
-    if (schemaEl) {
-      try {
-        var schema = JSON.parse(schemaEl.textContent);
-        schema.offers.price = '2750';
-        delete schema.offers.priceValidUntil;
-        schemaEl.textContent = JSON.stringify(schema);
-      } catch (e) { /* El contenido visible sigue siendo correcto. */ }
-    }
-  }
-
-  function updateCountdown() {
-    if (!countdown) return;
-    var distance = deadline - Date.now();
-    if (distance <= 0) {
-      setStandardPrice();
-      return;
-    }
-    var days = Math.floor(distance / 86400000);
-    var hours = Math.floor((distance % 86400000) / 3600000);
-    var minutes = Math.floor((distance % 3600000) / 60000);
-    var seconds = Math.floor((distance % 60000) / 1000);
-    countdown.querySelector('[data-days]').textContent = String(days).padStart(2, '0');
-    countdown.querySelector('[data-hours]').textContent = String(hours).padStart(2, '0');
-    countdown.querySelector('[data-minutes]').textContent = String(minutes).padStart(2, '0');
-    countdown.querySelector('[data-seconds]').textContent = String(seconds).padStart(2, '0');
-  }
-
-  if (Date.now() > deadline) setStandardPrice();
-  else if (countdown) {
-    updateCountdown();
-    window.setInterval(updateCountdown, 1000);
-  }
-
   var lightbox = document.getElementById('villaLightbox');
   if (lightbox) {
     var lightboxImage = lightbox.querySelector('img');
